@@ -1,0 +1,132 @@
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Roboto:700,300,400' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="styles/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles/login.css">
+<link rel="stylesheet" href="styles/css/jquery.jqplot.min.css">
+
+</head>
+<body>
+	<header ng-show=" sess!=null">
+		<div><img src="imgs/logo.png" class="iconimg"/> <span class="titles">iGroup</span></div>
+
+	</header>
+	
+	<div id="main" style="min-height:660px;" ng-class="{true:'margin-top-50',false:''}[$rootScope.currentUser!=null]" ng-view>
+	</div>
+	<footer>
+		<ul>
+			<li><a  modal-show  data-toggle="modal" data-target="#privacy">Privacy Policy</a></li>
+			<li><a  modal-show  data-toggle="modal" data-target="#terms">Terms of use</a></li>
+			<li><a modal-show s data-toggle="modal" data-target="#support">Support</a></li>
+		</ul>
+	</footer>
+
+
+
+<div class="modal fade" id="privacy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Privacy policy</h4>
+      </div>
+      <div class="modal-body">
+			Permission is hereby granted, free of charge, to any person obtaining a copy
+			of this software and associated documentation files (the "Software"), to deal
+			in the Software without restriction, including without limitation the rights
+			to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+			copies of the Software, and to permit persons to whom the Software is
+			furnished to do so, subject to the following conditions:
+
+			The above copyright notice and this permission notice shall be included in
+			all copies or substantial portions of the Software.
+
+			THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+			IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+			FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+			AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+			LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+			OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+			THE SOFTWARE.
+      </div>
+            <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="terms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Terms and conditions</h4>
+      </div>
+      <div class="modal-body">
+			        The MIT License (MIT)
+
+			Copyright (c) 2011-2015 Twitter, Inc
+
+			Permission is hereby granted, free of charge, to any person obtaining a copy
+			of this software and associated documentation files (the "Software"), to deal
+			in the Software without restriction, including without limitation the rights
+			to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+			copies of the Software, and to permit persons to whom the Software is
+			furnished to do so, subject to the following conditions:
+
+			The above copyright notice and this permission notice shall be included in
+			all copies or substantial portions of the Software.
+
+			THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+			IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+			FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+			AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+			LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+			OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+			THE SOFTWARE.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="support" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"  ng-init="msg=false">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Support</h4>
+      </div>
+      <div class="modal-body">
+      <p class="sucmsg" ng-show="msg">Request is sent successfully</p>
+      		<input type="text" name="subject" placeholder="Subject">
+      		<textarea placeholder="message"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+        <button type="button" class="btn btn-primary" ng-click="msg=true" data-dismiss="modal" >Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+	<script type="text/javascript" src="scripts/angular.js"></script>
+	<script type="text/javascript" src="scripts/jquery-2.0.0.js"></script>
+	<script type="text/javascript" src="scripts/angular-route.min.js"></script>
+	<script type="text/javascript" src="scripts/angular-resource.js"></script>
+	<script type="text/javascript" src="scripts/angular-cookies.js"></script>
+
+	<script type="text/javascript" src="scripts/angular-ui.min.js"></script>
+	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="scripts/require.js"  data-main="scripts/appBootstrap.js"></script>
+		<script type="text/javascript" src="scripts/chart.js"></script>
+			<script src="scripts/service/service.js" ></script>
+
+	
+</body>
+</html>

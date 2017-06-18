@@ -1,0 +1,14 @@
+function combinations(str) {
+    var makeCombinations = function(head, remains, a) {
+        if (!head && !remains)
+            return;
+        if (!remains) {
+            a.push(active);
+        } else {
+            makeCombinations(head + remains[0], remains.slice(1), a);
+            makeCombinations(head, remains.slice(1), a);
+        }
+        return a;
+    }
+    return makeCombinations("", str, []);
+}

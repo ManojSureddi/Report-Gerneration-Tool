@@ -1,0 +1,32 @@
+<br/><br/><br/>
+<div class="sessiondetails"><span>Hi! {{uname}}</span><span><a ng-click="process.logOut()">Logout</a></span></div>
+<div class="home-wrapper">
+		<h1 style="margin-top:5%;" align="center"><img style="  width: 50px;margin-left:5px;" src="imgs/rep.png">Reports</h1>
+		<div class="link">
+			<ul class="reports">
+				<li><a class="one"  data-toggle="modal" data-target="#charts"  ng-click="process.plotChart(1);" >Salesman <br/> report</a></li>
+				<li><a class="two"  data-toggle="modal" data-target="#charts"  ng-click="process.plotChart(2);">Total<br/>  sales/month</a></li>
+				<li><a class="three" data-toggle="modal" data-target="#charts"  ng-click="process.plotChart(3);">Top 5 <br/> orders</a></li>
+				<li><a class="four"  data-toggle="modal" data-target="#charts" ng-click="process.plotChart(4);">Top 5 <br/> salesman</a></li>
+			</ul>	
+		</div>
+
+		<div class="modal fade" id="charts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">{{modalTitle}}</h4>
+		      </div>
+		      <div class="modal-body">
+		      		<div  id="plotarea" style="height:500px; width:500px;"> </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		       
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+</div>
